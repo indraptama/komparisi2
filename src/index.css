@@ -1,0 +1,12 @@
+html {
+  font-size: 87.5%;
+}
+
+body, #app {
+  height: 100%;
+}
+body {
+  font-family: 'Roboto';
+  margin: 0;
+  padding: 0;
+}
