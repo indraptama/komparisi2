@@ -12,15 +12,8 @@ export default class InputText extends Component {
 
   inputTypeChoice(event) {
     if (this.props.type === 'number') {
-      if(event.keyCode > 31 && event.keyCode < 48 || event.keyCode > 57) {
-        event.preventDefault();
-      }
-      
-      this.setState({
-        value: event.target.value,
-      })
+      onlyNumeric(event)
     }
-
     this.setState({
       value: event.target.value,
     })
@@ -39,6 +32,8 @@ export default class InputText extends Component {
           type={this.props.type}
           value={this.state.value}
           placeholder={this.props.placeholder}
+          min={this.props.numRange[0]}
+          max={this.props.numRange[1]}
         />
       </label>
     )

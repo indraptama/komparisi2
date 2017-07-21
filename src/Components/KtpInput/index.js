@@ -10,7 +10,7 @@ export default class KtpInput extends Component {
   render() {
     return (
       <div>
-        <InputText label="N.I.K" name="nik" type="number"/>
+        <InputText label="N.I.K" name="nik" type="number" numRange={[0,31]}/>
 
       </div>);
   }
